@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
+    <style>
+        body{
+            background-image:url("images/bg-intro-desktop.png");
+            background-color: hsl(0, 100%, 74%) ;
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+            font-family: "Poppins";
+            font-size: 16px;
+            flex-wrap: wrap;
+        }
+
+        body div{
+            width: 500px;
+            margin-top: 50px;
+            
+        }
+        
+        .text-large{
+            margin-top: 150px;
+            
+            font-weight: 700;
+            font-size: 38px;
+        }
+        .text-small{
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .try-free{
+            background-color: hsl(248, 32%, 49%);
+            text-align: center;
+            font-weight: 400;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 0px 8px  rgba(0, 0, 0, 0.15);
+        }
+        
+        .bold{
+            font-weight: 600;
+            
+        }
+        form{
+            background-color: white;
+            padding: 30px 20px 30px 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            height: 40px;
+            width: auto;
+            border: 0.05px solid rgb(221, 221, 221);
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: hsl(246, 25%, 77%);
+            font-family: "Poppins";
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 4px;
+
+        }
+        input:focus{
+            outline: none;
+            border: 1px solid hsl(248, 32%, 49%);
+        }
+
+        .submit{
+            background-color: rgb(20, 235, 153);
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .small{
+            color: hsl(246, 25%, 77%);
+            font-size: 11px;
+            text-align: center;
+        }
+        .terms{
+            color: hsl(0, 100%, 74%);
+            font-weight: 500;
+        }
+
+        @media only screen and (max-width: 375px){
+            body{
+                background-image: url("images/bg-intro-mobile.png");
+                flex-direction: column;
+                flex-wrap: nowrap;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            body div{
+                width: auto;
+                margin-top: 25px;
+                
+            }
+            .text p{
+                text-align: center;
+            }
+            .text-large{
+                font-size: 28px;
+                margin-top: 40px;
+            }
+            .try-free{
+                height: 80px;
+                padding-left: 20%;
+                padding-right: 20%;
+                font-size: 14px;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <p class="text-large">Learn to code by watching others</p>
+        <p class="text-small">See how experienced developers solve problems in real time. 
+            Watching scripted tutorials is great, but understanding how developers think is invaluable.
+        </p>
+    </div>
+    <div class="form-container">
+        <div class="try-free"><p><span class="bold">Try it free 7 days</span> then $20/mo. thereafter. </p></div>
+     <form action="">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="text" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+
+        <input type="submit" value="Claim your free trial" class="submit">
+        <p class="small">By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
+     </form>
+    
+    </div>
+</body>
+</html>
