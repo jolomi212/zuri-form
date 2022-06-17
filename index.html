@@ -92,6 +92,34 @@
             color: hsl(0, 100%, 74%);
             font-weight: 500;
         }
+        
+        input:required:invalid {
+        outline: none;
+        border: none;
+        border: 1px solid hsl(0, 100%, 74%);
+        background-image: url(images/icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-origin: content-box;
+        }
+        input:invalid+span {
+        width: auto;
+        margin-top: -20px ;
+        text-align: right;
+        display: inline;
+        color: hsl(0, 100%, 74%);
+        float: right;
+        font-size: 10px;
+        font-style: italic;
+        }
+        input:invalid {
+        outline: none;
+        border: none;
+        border: 1px solid hsl(154, 59% 31%);
+        }
+        input+span {
+        display: none;
+        }
 
         @media only screen and (max-width: 400px){
             body{
@@ -133,10 +161,10 @@
     <div class="form-container">
         <div class="try-free"><p><span class="bold">Try it free 7 days</span> then $20/mo. thereafter. </p></div>
      <form action="">
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
-        <input type="text" placeholder="Email Address" required>
-        <input type="password" placeholder="Password" required>
+        <input type="text" placeholder="First Name" required><span>First name cannot be empty</span>
+        <input type="text" placeholder="Last Name" required><span>Last name cannot be empty</span>
+        <input type="text" placeholder="Email Address" required><span>Email cannot be empty</span>
+        <input type="password" placeholder="Password" required><span>Password cannot be empty</span>
 
         <input type="submit" value="Claim your free trial" class="submit">
         <p class="small">By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
